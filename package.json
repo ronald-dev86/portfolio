@@ -9,6 +9,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.1.2"
+    "@astrojs/vercel": "^8.0.1",
+    "astro": "^5.1.2",
+    "firebase": "^11.1.0",
+    "firebase-admin": "^13.0.2"
   }
 }
