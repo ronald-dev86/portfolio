@@ -22,7 +22,7 @@ const initApp = () => {
     // Use default config in firebase functions. Should be already injected in the server by Firebase.
     return initializeApp()
   }*/
-  console.info('Loading service account from env.',serviceAccount)
+  console.info('Loading service account from env.')
   return initializeApp({
     credential: cert(serviceAccount as ServiceAccount)
   })
