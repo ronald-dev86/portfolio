@@ -27,8 +27,27 @@ if (Astro.cookies.has("__session")) {
               <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                   Inicia sesión con tu cuenta
               </h1>
+              <div>
+                <button id="google" class="py-5 flex items-center justify-center text-sm font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+                  <img class="w-8 h-8 mr-2 items-center" src="../logo_google.svg">
+                  <span class="">Inicia sesión con Google</span>
+                </button>
+                <div class="flex  items-center justify-between  items-baseline text-sm font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+                  <div class=" border-gray-300 border-b-2 flex-none w-48 h-2">
+
+                  </div>
+                  <div class=" h-8 justify-center items-center text-sm leading-tight tracking-tight text-gray-400 md:text-2xl ">
+                    OR
+                  </div>
+                  
+                  <div class=" border-gray-300 border-b-2 flex-none w-48 h-2">
+  
+                  </div>
+                </div>
+                
+              </div>
               <form class="space-y-4 md:space-y-6" action="/api/auth/signin" method="post">
-                  <div>
+                  <div class="rounded-sm">
                       <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tu email</label>
                       <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required="">
                   </div>
@@ -64,6 +83,8 @@ if (Astro.cookies.has("__session")) {
     getAuth,
     inMemoryPersistence,
     signInWithEmailAndPassword,
+    GoogleAuthProvider,
+    signInWithPopup
   } from "firebase/auth";
   import { app } from "../firebase/client";
   const spinner = document.getElementById("spinner") as HTMLSpanElement;
@@ -104,6 +125,25 @@ if (Astro.cookies.has("__session")) {
 
     if (response.redirected) {
       window.location.assign(response.url);
+    }
+  });
+
+  const googleSignin = document.querySelector("#google") as HTMLButtonElement;
+  googleSignin.addEventListener("click", async () => {
+    const provider = new GoogleAuthProvider();
+    console.log(provider);
+    const userCredential = await signInWithPopup(auth, provider);
+    
+    const idToken = await userCredential.user.getIdToken();
+    console.log(idToken);
+    const res = await fetch("/api/auth/signin", {
+      headers: {
+        Authorization: `Bearer ${idToken}`,
+      },
+    });
+
+    if (res.redirected) {
+      window.location.assign(res.url);
     }
   });
 </script>
