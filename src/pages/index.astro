@@ -2,6 +2,9 @@
 import Layout from "../layouts/Layout.astro"
 import { app } from "../firebase/server";
 import { getFirestore } from "firebase-admin/firestore";
+import { getAuth } from "firebase-admin/auth";
+import { UsersTypes, UserSystem } from "../common/users.interface";
+
 
 
 if (!Astro.cookies.has("__session")) {
@@ -9,10 +12,27 @@ if (!Astro.cookies.has("__session")) {
 }
 
 const db = getFirestore(app);
-const friendsRef = db.collection("users");
-const friendSnapshot = await friendsRef.get();
+const auth = getAuth(app);
 
-friendSnapshot.forEach((º) => console.log(º.data()));
+const decodedCookie = await auth.verifySessionCookie(Astro.cookies.get("__session").value);
+const user = await auth.getUser(decodedCookie.uid);
+const usersRef = db.collection("users");
+
+const userSystem = await usersRef.doc(user.uid).get();
+if (!userSystem.exists) {
+    const payload: UserSystem = {
+        uid: user.uid,
+        type: UsersTypes.ADMIN,
+        menu: [
+        {
+            icon:   "clients", 
+            name:  "Clientes", 
+            url:    "/clients" 
+        },]
+    }
+    await usersRef.doc(user.uid).set(payload, { merge: true });
+} 
+return Astro.redirect("/dashboard");
 ---
 
 <Layout title="Flame">
