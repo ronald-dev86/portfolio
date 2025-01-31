@@ -1,5 +1,8 @@
 ---
-const { title } = Astro.props;
+import SiderBar from "../components/SiderBar.astro";
+
+const { title , selector} = Astro.props;
+const is_cookied = Astro.locals.token;
 ---
 <!doctype html>
 <html lang="en">
@@ -11,7 +14,21 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body class="bg-gray-50 dark:bg-gray-900">
-		<slot />
+		{
+			is_cookied === undefined ? 
+			<slot />
+			:
+			<div class="flex h-screen w-full">
+        		<SiderBar app_name="Demo Astro" selector={selector}	></SiderBar>
+        		<div class="block h-screen w-full">
+            		<nav class="w-full">
+               		 <slot />
+            		</nav>
+            
+        		</div>
+    		</div>
+		}
+		
 	</body>
 </html>
 

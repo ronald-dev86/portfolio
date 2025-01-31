@@ -12,7 +12,7 @@ export const middleware = defineMiddleware(async (context, next) => {
         return context.redirect('/signin');
     }
 
-    context.locals.token = token.value;
+    context.locals.token = token?.value;
     return next();
 });
 
