@@ -7,22 +7,15 @@ import { getCollection } from 'astro:content';
 const { title, selector } = Astro.props;
 
 const auth = getAuth(app);
+const token  =  Astro.locals.token;
 
+
+const decodedCookie = await auth.verifySessionCookie(token);
+const user = await auth.getUser(decodedCookie.uid);
+console.log(user.displayName);
 const userCollection = await getCollection('users');
 console.log(userCollection)
 
-/* Check current session */
-if (!Astro.cookies.has("__session")) {
-  return Astro.redirect("/signin");
-}
-const sessionCookie = Astro.cookies.get("__session").value ;
-const decodedCookie = await auth.verifySessionCookie(sessionCookie);
-const user = await auth.getUser(decodedCookie.uid);
-console.log(user.displayName);
-
-if (!user) {
-  return Astro.redirect("/signin");
-}
 ---
 
 <Layout title="dashboard">

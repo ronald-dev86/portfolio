@@ -3,24 +3,19 @@ import Layout from "../layouts/Layout.astro"
 import { app } from "../firebase/server";
 import { getFirestore } from "firebase-admin/firestore";
 import { getAuth } from "firebase-admin/auth";
-import { UsersTypes, UserSystem } from "../common/users.interface";
+import { UsersTypes, type IUserSystem } from "../common/users.interface";
 
-
-
-if (!Astro.cookies.has("__session")) {
-  return Astro.redirect("/signin");
-}
 
 const db = getFirestore(app);
 const auth = getAuth(app);
 
-const decodedCookie = await auth.verifySessionCookie(Astro.cookies.get("__session").value);
+const decodedCookie = await auth.verifySessionCookie(Astro.locals.token);
 const user = await auth.getUser(decodedCookie.uid);
 const usersRef = db.collection("users");
 
 const userSystem = await usersRef.doc(user.uid).get();
 if (!userSystem.exists) {
-    const payload: UserSystem = {
+    const payload: IUserSystem = {
         uid: user.uid,
         type: UsersTypes.ADMIN,
         menu: [

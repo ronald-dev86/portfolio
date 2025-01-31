@@ -1,4 +1,4 @@
-export interface UserSystem {
+export interface IUserSystem {
     uid: string,
     type: UsersTypes,
     menu: any[]
