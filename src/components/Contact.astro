@@ -1,0 +1,24 @@
+---
+// src/components/Contact.astro
+---
+
+<section id="contact" class="py-20 bg-gray-700">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center">Contacto</h2>
+      <form class="mt-8 max-w-lg mx-auto">
+        <div class="mb-4">
+          <label for="name" class="block text-sm font-medium">Nombre</label>
+          <input type="text" id="name" class="mt-1 p-2 w-full bg-gray-600 rounded">
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-sm font-medium">Email</label>
+          <input type="email" id="email" class="mt-1 p-2 w-full bg-gray-600 rounded">
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block text-sm font-medium">Mensaje</label>
+          <textarea id="message" rows="4" class="mt-1 p-2 w-full bg-gray-600 rounded"></textarea>
+        </div>
+        <button type="submit" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded">Enviar</button>
+      </form>
+    </div>
+  </section>

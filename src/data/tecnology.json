@@ -1,0 +1,128 @@
+{
+    "data":[
+        {
+            "type": "Framework",
+            "selected": true,
+            "skills":[
+                {
+                    "label": "JS",
+                    "image": "/images/skills/javascript.png"
+                },
+                {
+                    "label": "PHP",
+                    "image": "/images/skills/php.png"
+                },
+                {
+                    "label": "Angular",
+                    "image": "/images/skills/angular.png"  
+                },
+                {
+                    "label": "Astro",
+                    "image": "/images/skills/astro.png"
+                },
+                {
+                    "label": "Node",
+                    "image": "/images/skills/node.png"
+                },
+                {
+                    "label": "Ionic",
+                    "image": "/images/skills/ionic.png"
+                },
+                {
+                    "label": "Laravel",
+                    "image": "/images/skills/laravel.png"
+                }
+            ]
+        },
+        {
+            "type": "Database",
+            "selected": false,
+            "skills":[
+                {
+                    "label": "Mysql",
+                    "image": "/images/skills/mysql.png"
+                },
+                {
+                    "label": "Postgresql",
+                    "image": "/images/skills/postgresql.png"
+                },
+                {
+                    "label": "Mongo",
+                    "image": "/images/skills/mongo.png"
+                },
+                {
+                    "label": "Elasticsearch",
+                    "image": "/images/skills/elasticsearch.png"
+                }
+            ] 
+        },
+        {
+            "type":"Cloud Plataforms",
+            "selected":false,
+            "skills": [
+                {
+                    "label": "Heroku",
+                    "image": "/images/skills/heroku.png"
+                },
+                {
+                    "label": "Vercel",
+                    "image": "/images/skills/vercel.png"
+                },
+                {
+                    "label": "Firebase",
+                    "image": "/images/skills/firebase.png"
+                }
+            ]
+          },
+          {
+            "type":"DevOps",
+            "selected":false,
+            "skills": [
+                {
+                    "label": "Docker",
+                    "image": "/images/skills/docker.png"
+                }
+            ]
+          },
+          {
+            "type":"Sotfware Arquitecture",
+            "selected":false,
+            "skills": [
+                {
+                    "label": "Microservices",
+                    "image": "/images/skills/microservicios.png"
+                },
+                {
+                    "label": "Hexagonal",
+                    "image": "/images/skills/hexagonal.png"
+                },
+                {
+                    "label": "Domain-Driven Design",
+                    "image": "/images/skills/ddd.webp"
+                },
+                {
+                    "label": "Model View Controller",
+                    "image": "/images/skills/mvc.jpeg"
+                }
+            ]
+          }
+    ]
+}
+
+    
+
+    
+      
+    
+    
+    
+    
+    
+
+   
+
+    
+
+  
+      
+    

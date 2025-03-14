@@ -1,0 +1,57 @@
+---
+import { getCollection } from 'astro:content';
+import SkillsSelector from './SkillsSelector.jsx';
+let skills:any= []
+
+await getCollection('data',({data}) => { 
+  data.data.map((item:any) => {
+    skills.push(item)
+  })
+});
+
+---
+<section id="experence" class="py-20 overflow-x-auto" >
+    <h2 class="text-3xl font-bold text-center">Habilidades Tecnicas</h2>
+    <div class="container flex flex-col mx-auto space-y-6">
+        <div class="justify-center text-center py-4">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia
+                doloribus!
+          </p> 
+        </div>
+        <SkillsSelector client:load initialSkills={skills} />
+        <!--<div class="container flex flex-col items-center mx-0 md:mx-20 lg:mx-40 xl:mx-80 2xl:mx-96 w-auto ">
+          <div class="flex justify-center ">
+            <ul aria-label="active_tecnology"  id="tecnology" class="flex justify-around space-x-6 cursor-pointer text-center items-center">
+              {skills.map((item:any) => 
+                <li  id={item.type} class="hover:bg-white hover:text-black p-2 rounded-xl  border-spacing-1 border-2" class:list={item.selected ? "bg-white text-black actived":""}>
+                  <p>
+                    {item.type}
+                  </p>
+                </li>
+              )}
+            </ul>
+          </div>
+          <div class="bg-gray-800 w-full h-96 my-8 rounded-xl">
+            <div id="skills" class="flex flex-wrap justify-center items-center space-x-8" >
+                { selected.skills.map((item:any) => 
+        
+                    <div id={item.label} class:list={item.id} class="bg-white text-black rounded-lg flex items-centers text-center mt-8 ">
+        
+                        <div  class:list={item.image}  class="bg-contain bg-no-repeat bg-center w-12 h-12 m-[8px]">
+        
+                        </div> 
+                        <strong class=" flex items-center my-[8px] mr-[8px]">{item.label}</strong>
+                    </div>)
+                }
+            </div>
+        </div>
+          
+        </div> -->
+    </div>
+</section>
+
+
+
+
+

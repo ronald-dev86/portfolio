@@ -1,0 +1,15 @@
+---
+import { Icon } from 'astro-icon/components'
+import Menu from '../components/Menu.astro';
+
+---
+
+<header class="sticky top-0  z-10  p-6">
+    <nav class="container mx-auto flex justify-between items-end">
+      <Menu></Menu>
+      <a href="mailto:ronald.dev86@gmail.com?Subject=Hola Ronald, me gustaría contratarte"  target="_blank" class="flex items-end space-x-2 ">
+        <Icon class="sm:size-7 sr-only sm:not-sr-only drop-shadow-[4px_3px_3px_rgba(29,78,216,1.25)]" name="chatbubble" />
+        <span class="px-[5px] tracking-widest hire-me">Hablemos</span>
+      </a>
+    </nav>
+  </header>
