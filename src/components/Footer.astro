@@ -1,7 +1,82 @@
 ---
-// src/components/Footer.astro
+import { Icon } from 'astro-icon/components'
 ---
 
 <footer class="p-6 text-center">
-    <p>&copy; 2023 Mi Portafolio. Todos los derechos reservados.</p>
-  </footer>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div class="col-span-2 ">
+      <div class=" mb-4">
+        <p>Seguime en mis redes sociales</p>
+      </div>
+      <div class="flex justify-center">
+        <a href="https://www.linkedin.com/in/ronald-pe%C3%B1aloza/" target="_blank" class="px-3">
+            <Icon class="size-8"  name="linkedin"/>
+        </a>
+        <a href="https://github.com/ronald-dev86" target="_blank" class="px-3">
+            <Icon class="size-8"  name="github"/>
+        </a>
+        <a href="https://www.instagram.com/rpenaloza08" target="_blank" class="px-3">
+            <Icon class="size-8"  name="instagram"/>
+        </a>
+        <a href="https://wa.me/584129653465" target="_blank" class="px-3">
+            <Icon class="size-8"  name="whatsapp"/>
+        </a>
+      </div>
+   
+    </div>
+    <div class="sr-only sm:not-sr-only">
+      <div class="mb-4 ml-5 text-start">
+        <p class="flex flex-col">Menu</p>
+      </div>
+      <ul id="click-item " class=" ml-5 text-start">
+        <li class="mt-2 text-white hover:text-gray-500 " >
+            <a  href="#about"   >
+                <h2 class="text-lg">Sobre Mí</h2>
+            </a>
+        </li>
+        <li class="mt-2 text-white hover:text-gray-500">
+            <a  href="#projects"  >
+                <h1 class="text-lg">
+                    Proyectos
+                </h1>
+            </a>
+        </li>
+        <li class=" mt-2 text-white hover:text-gray-500">
+            <a href="#experence" >
+                <h1 class="text-lg">
+                    Experiencia
+                </h1>
+            </a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-span-3">
+      <p>&copy; 2025 Todos los derechos reservados.</p>
+    </div>
+  </div>
+  
+    <!--
+  
+    <div class="  border  m-3 flex flex-col ">
+      <div class=" my-3 mx-12  justify-center">
+        <p>Seguime en mis redes sociales</p>
+        <div class="flex justify-around">
+          
+            <a href="https://www.linkedin.com/in/ronald-pe%C3%B1aloza/" target="_blank" class="px-3">
+                <Icon class="size-6"  name="linkedin"/>
+            </a>
+            <a href="https://github.com/ronald-dev86" target="_blank" class="px-3">
+                <Icon class="size-6"  name="github"/>
+            </a>
+            <a href="https://www.instagram.com/rpenaloza08" target="_blank" class="px-3">
+                <Icon class="size-6"  name="instagram"/>
+            </a>
+            <a href="https://wa.me/584129653465" target="_blank" class="px-3">
+                <Icon class="size-6"  name="whatsapp"/>
+            </a>
+        </div>
+      </div>
+    </div>
+     -->
+    
+</footer>
