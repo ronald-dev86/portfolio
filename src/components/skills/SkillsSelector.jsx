@@ -35,7 +35,7 @@ function SkillsSelector({ initialSkills }) {
           ))}
         </ul>
       </div>
-      <div className="bg-gray-800 w-full h-96 my-8 rounded-xl">
+      <div className="bg-gray-800 w-full h-72 my-8 rounded-xl">
         <div id="skills" className="flex flex-wrap justify-center items-center space-x-8">
           {selectedSkill?.skills.map(item => (
             <div key={item.label} id={item.label} className={`bg-white text-black rounded-lg flex items-centers text-center mt-8 ${item.id}`}>
