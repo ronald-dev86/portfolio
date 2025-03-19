@@ -20,7 +20,7 @@ function SkillsSelector({ initialSkills }) {
   }, [skills]);
 
   return (
-  <div class="mt-6 text-center">
+  <div className="mt-6 text-center">
     <div className="flex justify-center">
       <div aria-label="active_tecnology" id="tecnology" className=" flex justify-around space-x-6 cursor-pointer text-center items-center">
         {skills.map(skill => (
@@ -45,41 +45,9 @@ function SkillsSelector({ initialSkills }) {
         ))}
       </div>
     </div>
-           
-    
   </div>
     
   );
 }
-
-/**
- * 
- * <div className="container flex flex-col w-auto ">
-      <div className="flex justify-center  ">
-        <div aria-label="active_tecnology" id="tecnology" className="flex justify-around space-x-6 cursor-pointer text-center items-center ">
-          {skills.map(skill => (
-            <div
-              key={skill.type}
-              id={skill.type}
-              className={`hover:bg-white hover:text-black p-2 rounded-xl border-spacing-1 border-2 ${skill.selected ? 'bg-white text-black actived' : ''}`}
-              onClick={() => handleSkillClick(skill.type)}
-            >
-              <p>{skill.type}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="bg-gray-800  h-96 mt-8 rounded-xl">
-        <div id="skills" className=" flex  flex-wrap justify-center space-x-8 border border-white px-8">
-          {selectedSkill?.skills.map(item => (
-            <div key={item.label} id={item.label} className={`bg-white text-black rounded-lg flex items-centers text-center mt-8 ${item.id}`}>
-              <div className={`bg-contain bg-no-repeat bg-center w-12 h-12 m-[8px]`} style={{ backgroundImage: `url(${item.image})` }} ></div>
-              <strong className="flex items-center my-[8px] mr-[8px]">{item.label}</strong>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
- */
 
 export default SkillsSelector;
