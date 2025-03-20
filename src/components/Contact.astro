@@ -5,20 +5,23 @@
 <section id="contact" class="py-20 bg-[url(/images/bg_contact.jpg)] bg-cover bg-fixed">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold text-center">Contacto</h2>
-      <form class="mt-8 max-w-lg mx-auto" action="https://formspree.io/f/myzekbgg" method="POST">
+      <form class="mt-8 max-w-lg mx-auto" action="https://formspree.io/f/myzekbgg" method="POST" aria-label="form-contact" id="myForm">
         <div class="mb-4">
           <label for="name" class="block text-sm font-medium">Nombre</label>
-          <input type="text" id="name" class="mt-1 p-2 w-full rounded">
+          <input type="text" id="name" name="name" class="mt-1 p-2 w-full rounded  text-black">
         </div>
         <div class="mb-4">
           <label for="email" class="block text-sm font-medium">Email</label>
-          <input type="email" id="email" class="mt-1 p-2 w-full  rounded">
+          <input type="email" id="email" name="email" class="mt-1 p-2 w-full  rounded  text-black">
         </div>
         <div class="mb-4">
           <label for="message" class="block text-sm font-medium">Mensaje</label>
-          <textarea id="message" rows="4" class="mt-1 p-2 w-full rounded"></textarea>
+          <textarea id="message" rows="4" name="message" class="mt-1 p-2 w-full rounded text-black"></textarea>
         </div>
         <button type="submit" class="px-6 py-3 bg-blue-800 hover:bg-blue-700 rounded">Enviar</button>
       </form>
     </div>
   </section>
+  <script aria-label="form-contact">
+    document.getElementsById("myForm").reset();
+  </script>
