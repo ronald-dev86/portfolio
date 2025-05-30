@@ -1,15 +1,32 @@
 ---
 import { Icon } from 'astro-icon/components'
-import Menu from '../components/Menu.astro';
-
 ---
 
 <header class="sticky top-0  z-10  p-6">
     <nav class="container mx-auto flex justify-between items-end">
-      <Menu></Menu>
-      <a href="mailto:ronald.dev86@gmail.com?Subject=Hola Ronald, me gustaría contratarte"  target="_blank" class="flex items-end space-x-2 ">
-        <Icon class="sm:size-7 sr-only sm:not-sr-only drop-shadow-[4px_3px_3px_rgba(29,78,216,1.25)]" name="chatbubble" />
-        <span class="px-[5px] tracking-widest hire-me">Hablemos</span>
+      <div class=" my-3 mx-12 flex justify-between ">
+            <div class="flex justify-around">
+                <a href="https://www.linkedin.com/in/ronald-pe%C3%B1aloza/" target="_blank" class="px-3">
+                    <Icon class="size-6 drop-shadow-[4px_3px_3px_rgba(29,78,216,1.25)]"  name="linkedin"/>
+                </a>
+                <a href="https://github.com/ronald-dev86" target="_blank" class="px-3">
+                    <Icon class="size-6 drop-shadow-[4px_3px_3px_rgba(29,78,216,1.25)]"  name="github"/>
+                </a>
+                <a href="https://www.instagram.com/rpenaloza.dev" target="_blank" class="px-3">
+                    <Icon class="size-6 drop-shadow-[4px_3px_3px_rgba(29,78,216,1.25)]"  name="instagram"/>
+                </a>
+                <a href="https://wa.me/584129653465" target="_blank" class="px-3">
+                    <Icon class="size-6 drop-shadow-[4px_3px_3px_rgba(29,78,216,1.25)]"  name="whatsapp"/>
+                </a>
+                <a href="https://t.me/ronalddev86" target="_blank" class="px-3">
+                    <Icon class="size-6 drop-shadow-[4px_3px_3px_rgba(29,78,216,1.25)]" name="paper-plane-outline" />
+                </a>
+            </div>
+            
+        </div>
+      <a href="/file/fullstack_con foto.pdf"  target="_blank" class="flex items-end space-x-2 ">
+        <Icon class="sm:size-7  drop-shadow-[4px_3px_3px_rgba(29,78,216,1.25)]" name="reader" />
+        <span class="px-[5px] tracking-widest hire-me">Mi CV</span>
       </a>
     </nav>
   </header>
