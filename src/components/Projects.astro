@@ -1,17 +1,47 @@
 ---
-// src/components/Projects.astro
+import { Icon } from 'astro-icon/components'
 ---
 
-<section id="projects" class="py-20  bg-gray-800">
+<section id="projects" class="py-20  bg-gray-700 ">
+  <div class="mx-auto px-4 w-12/12 md:w-11/12 lg:w-10/12  xl:w-9/12  2xl:w-8/12 flex">
     <div class=" container mx-auto px-4 w-12/12 md:w-11/12 lg:w-10/12  xl:w-9/12  2xl:w-8/12 ">
-      <a href="https://github.com/ronald-dev86/frontino-back" class="animate__animated animate__fadeInRight flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700" target="_blank" >
-        
+      <div class="animate__animated animate__fadeInRight flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700" >
         <div class=" w-full lg:w-screen  h-80  bg-[url(/images/project/api-rest-frontino.jpg)] bg-cover bg-center rounded-t-lg md:rounded-none md:rounded-s-lg" ></div>
         <div class="flex flex-col justify-between p-4 leading-normal">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Frontino Api-Rest</h5>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Esta Api permite gestionar el consumo de Gas que emite los medidores, en urbanismos y conjuntos residenciales, permite gestionar clientes, servicios y facturas, tiene el manejo de usuario por roles Admin, Owner y Views. Ofrece endpoints para crear, leer, actulizar y eliminar. Además, proporciona funcionalidades de generación de reportes.</p>
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Frontino Api-Rest</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Esta Api permite gestionar el consumo de Gas que emite los medidores, en urbanismos y conjuntos residenciales, permite gestionar clientes, servicios y facturas, tiene el manejo de usuario por roles Admin, Owner y Views. Ofrece endpoints para crear, leer, actulizar y eliminar. Además, proporciona funcionalidades de generación de reportes.</p>
+          <a href="https://github.com/ronald-dev86/frontino-back" target="_blank"  class="text-black">
+          <Icon class="size-8"  name="github"/>
+          </a>
         </div>
-        
-      </a>
+      </div>
     </div>
+    <div class=" container mx-auto px-4 w-12/12 md:w-11/12 lg:w-10/12  xl:w-9/12  2xl:w-8/12 ">
+      <div class="animate__animated animate__fadeInRight flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700" >
+        <div class=" w-full lg:w-screen  h-80  bg-[url(/images/project/Turpial-task.png)] bg-cover bg-center rounded-t-lg md:rounded-none md:rounded-s-lg" ></div>
+        <div class="flex flex-col justify-between p-4 leading-normal">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Turpial task app</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Aplicacion de tareas desarrollada con Angular y Firebase, permite a los usuarios crear, editar y eliminar tareas, ademas de gestionar la autenticacion de usuarios. Su api rest esta desarrollada con Node.js y Express.js  aplicado arquitectura Hexagonal. Muy sencilla y eficiente para la gestion de tareas.</p>
+          <div class="flex justify-around">
+            <a href="https://github.com/ronald-dev86/turpial-api-rest" target="_blank"  class="text-black">
+              Backend
+              <Icon class="size-8"  name="github"/>
+            </a>
+            <a href="https://github.com/ronald-dev86/turpial-app-angular" target="_blank"  class="text-black">
+              Frontend
+              <Icon class="size-8"  name="github"/>
+            </a>
+            <a href="https://turpial-app-angular.vercel.app/login" target="_blank"  class="text-black">
+              Demo
+              <Icon class="size-8"  name="reader"/>
+            </a>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    
   </section>
+
