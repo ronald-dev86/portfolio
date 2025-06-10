@@ -5,7 +5,7 @@ import Header from '../components/Header.astro';
 
 import Hero from '../components/Hero.astro';
 import About from '../components/About.astro';
-import Projects from '../components/Projects.astro';
+import Projects from '../components/projects/index.astro';
 import Contact from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
 import Skills from '../components/skills/index.astro';
@@ -21,14 +21,3 @@ import Skills from '../components/skills/index.astro';
   <Contact />
   <Footer />
 </BaseLayout>
-
-<style is:global>
-  .hire-me {
-    transition: letter-spacing 0.8s ease; 
-    display: inline-block;
-    letter-spacing: 0px; 
-  }
-  .hire-me:hover {
-    letter-spacing: 3px; 
-  }
-</style>
