@@ -1,0 +1,37 @@
+{
+    "items": [
+        {
+            "name": "Frontino Api-Rest",
+            "description": "Esta Api permite gestionar el consumo de Gas que emite los medidores, en urbanismos y conjuntos residenciales, permite gestionar clientes, servicios y facturas, tiene el manejo de usuario por roles Admin, Owner y Views. Ofrece endpoints para crear, leer, actulizar y eliminar. Además, proporciona funcionalidades de generación de reportes.",
+            "image": "images/project/api-rest-frontino.jpg",
+            "repositories":[
+                {
+                    "link": "https://github.com/ronald-dev86/frontino-back",
+                    "icon": "icons/github.svg"
+                }
+            ]
+        },
+        {
+            "name": "Turpial task app",
+            "description": "Aplicacion de tareas desarrollada con Angular y Firebase, permite a los usuarios crear, editar y eliminar tareas, ademas de gestionar la autenticacion de usuarios. Su api rest esta desarrollada con Node.js y Express.js  aplicado arquitectura Hexagonal. Muy sencilla y eficiente para la gestion de tareas.",
+            "image": "images/project/Turpial-task.png",
+            "repositories":[
+                {
+                    "link": "https://github.com/ronald-dev86/turpial-api-rest",
+                    "icon": "icons/github.svg"
+                },
+                {
+                    "link": "https://github.com/ronald-dev86/turpial-app-angular",
+                    "icon": "icons/github.svg"
+                },
+                {
+                    "link": "https://turpial-app-angular.vercel.app/login",
+                    "icon": "icons/reader.svg"
+                }
+            ]
+        }
+        
+        
+        
+    ]
+}
