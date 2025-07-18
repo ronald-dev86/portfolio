@@ -1,8 +1,8 @@
 {
     "items": [
         {
-            "name": "Frontino Api-Rest",
-            "description": "Esta Api permite gestionar el consumo de Gas que emite los medidores, en urbanismos y conjuntos residenciales, permite gestionar clientes, servicios y facturas, tiene el manejo de usuario por roles Admin, Owner y Views. Ofrece endpoints para crear, leer, actulizar y eliminar. Además, proporciona funcionalidades de generación de reportes.",
+            "name": "Frontino App",
+            "description": "Esta App permite gestionar el consumo de Gas que emite los medidores, en urbanismos y conjuntos residenciales, permite gestionar clientes, servicios y facturas, tiene el manejo de usuario por roles Admin, Owner y Views. Ofrece endpoints para crear, leer, actulizar y eliminar. Además, proporciona funcionalidades de generación de reportes.",
             "image": "images/project/api-rest-frontino.jpg",
             "repositories":[
                 {
