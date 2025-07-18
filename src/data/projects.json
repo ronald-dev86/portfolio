@@ -6,7 +6,11 @@
             "image": "images/project/api-rest-frontino.jpg",
             "repositories":[
                 {
-                    "link": "https://github.com/ronald-dev86/frontino-back",
+                    "link": "https://github.com/ronald-dev86/frontino-api-rest",
+                    "icon": "icons/github.svg"
+                },
+                 {
+                    "link": "https://github.com/ronald-dev86/frontino-app-vuejs",
                     "icon": "icons/github.svg"
                 }
             ]
