@@ -1,33 +1,34 @@
 ---
 import { Icon } from 'astro-icon/components'
+import { socialLinks, cvLink } from '../data/config.ts'
 ---
 
 <header class="sticky top-0  z-10  p-6 bg-stone-950 bg-opacity-35">
     <nav class="container mx-auto flex justify-between items-end">
         <div class=" my-3 sm:mx-12 flex justify-between ">
-            <div class="flex justify-around">
-                <a href="https://www.linkedin.com/in/ronald-pe%C3%B1aloza/" target="_blank">
-                    <Icon class="size-6 drop-shadow-[4px_3px_3px_rgba(29,78,216,1.25)]"  name="linkedin"/>
+<div class="flex justify-around">
+                <a href={socialLinks.linkedin.url} target="_blank" aria-label={socialLinks.linkedin.label}>
+                    <Icon class="size-6 drop-shadow-[4px_3px_3px_rgba(29,78,216,1.25)]" name={socialLinks.linkedin.icon}/>
                 </a>
-                <a href="https://github.com/ronald-dev86" target="_blank" class="px-3">
-                    <Icon class="size-6 drop-shadow-[4px_3px_3px_rgba(29,78,216,1.25)]"  name="github"/>
+                <a href={socialLinks.github.url} target="_blank" class="px-3" aria-label={socialLinks.github.label}>
+                    <Icon class="size-6 drop-shadow-[4px_3px_3px_rgba(29,78,216,1.25)]" name={socialLinks.github.icon}/>
                 </a>
-                <a href="https://www.instagram.com/rpenaloza.dev" target="_blank" class="px-3">
-                    <Icon class="size-6 drop-shadow-[4px_3px_3px_rgba(29,78,216,1.25)]"  name="instagram"/>
+                <a href={socialLinks.instagram.url} target="_blank" class="px-3" aria-label={socialLinks.instagram.label}>
+                    <Icon class="size-6 drop-shadow-[4px_3px_3px_rgba(29,78,216,1.25)]" name={socialLinks.instagram.icon}/>
                 </a>
-                <a href="https://wa.me/584129653465" target="_blank" class="px-3">
-                    <Icon class="size-6 drop-shadow-[4px_3px_3px_rgba(29,78,216,1.25)]"  name="whatsapp"/>
+                <a href={socialLinks.whatsapp.url} target="_blank" class="px-3" aria-label={socialLinks.whatsapp.label}>
+                    <Icon class="size-6 drop-shadow-[4px_3px_3px_rgba(29,78,216,1.25)]" name={socialLinks.whatsapp.icon}/>
                 </a>
-                <a href="https://t.me/ronalddev86" target="_blank" class="px-3">
-                    <Icon class="size-6 drop-shadow-[4px_3px_3px_rgba(29,78,216,1.25)]" name="paper-plane-outline" />
+                <a href={socialLinks.telegram.url} target="_blank" class="px-3" aria-label={socialLinks.telegram.label}>
+                    <Icon class="size-6 drop-shadow-[4px_3px_3px_rgba(29,78,216,1.25)]" name={socialLinks.telegram.icon} />
                 </a>
             </div>
             
         </div>
-        <div class=" my-3 mx-12flex justify-center ">
-            <a href="/file/fullstack_con foto.pdf"  target="_blank" class="flex items-end space-x-2 ">
-                <Icon class="size-6   drop-shadow-[4px_3px_3px_rgba(29,78,216,1.25)]" name="reader" />
-                <span class="px-[5px] tracking-widest hire-me sr-only sm:not-sr-only">Mi CV</span>
+<div class="my-3 mx-12 flex justify-center">
+            <a href={cvLink.url} target="_blank" class="flex items-end space-x-2" aria-label={cvLink.label}>
+                <Icon class="size-6 drop-shadow-[4px_3px_3px_rgba(29,78,216,1.25)]" name={cvLink.icon} />
+                <span class="px-[5px] tracking-widest hire-me sr-only sm:not-sr-only">{cvLink.label}</span>
             </a>
         </div>
       
